@@ -1,4 +1,4 @@
-from .base import BaseNode
+from utils.utils.nodes import BaseNode
 import rclpy
 from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor

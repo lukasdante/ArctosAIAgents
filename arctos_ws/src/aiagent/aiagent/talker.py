@@ -1,7 +1,7 @@
 import rclpy
 from rcl_interfaces.msg import ParameterDescriptor
 from std_msgs.msg import String, Bool
-from .base import BaseNode
+from utils.utils.nodes import BaseNode
 
 from kokoro import KPipeline
 import soundfile as sf
