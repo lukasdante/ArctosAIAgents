@@ -14,7 +14,12 @@ aiagent/base.py
 aiagent/recorder.py
 aiagent/talker.py
 aiagent/writer.py
+aiagent.egg-info/PKG-INFO
+aiagent.egg-info/SOURCES.txt
+aiagent.egg-info/dependency_links.txt
+aiagent.egg-info/entry_points.txt
+aiagent.egg-info/requires.txt
+aiagent.egg-info/top_level.txt
+aiagent.egg-info/zip-safe
+launch/audio_launch.py
 resource/aiagent
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

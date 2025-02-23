@@ -1,0 +1,20 @@
+[1.252s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/src/cancontrol': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cancontrol build --build-base /home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/build install --record /home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/install.log --single-version-externally-managed install_data
+[1.470s] running egg_info
+[1.471s] writing ../../build/cancontrol/cancontrol.egg-info/PKG-INFO
+[1.471s] writing dependency_links to ../../build/cancontrol/cancontrol.egg-info/dependency_links.txt
+[1.471s] writing entry points to ../../build/cancontrol/cancontrol.egg-info/entry_points.txt
+[1.471s] writing requirements to ../../build/cancontrol/cancontrol.egg-info/requires.txt
+[1.471s] writing top-level names to ../../build/cancontrol/cancontrol.egg-info/top_level.txt
+[1.472s] reading manifest file '../../build/cancontrol/cancontrol.egg-info/SOURCES.txt'
+[1.473s] writing manifest file '../../build/cancontrol/cancontrol.egg-info/SOURCES.txt'
+[1.473s] running build
+[1.473s] running build_py
+[1.473s] running install
+[1.473s] running install_lib
+[1.474s] running install_data
+[1.474s] running install_egg_info
+[1.475s] removing '/home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol/lib/python3.10/site-packages/cancontrol-0.0.0-py3.10.egg-info' (and everything under it)
+[1.475s] Copying ../../build/cancontrol/cancontrol.egg-info to /home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol/lib/python3.10/site-packages/cancontrol-0.0.0-py3.10.egg-info
+[1.475s] running install_scripts
+[1.489s] writing list of installed files to '/home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/install.log'
+[1.510s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/src/cancontrol' returned '0': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cancontrol build --build-base /home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/build install --record /home/louis/Projects/arctoshumble/arctos_ws/build/cancontrol/install.log --single-version-externally-managed install_data

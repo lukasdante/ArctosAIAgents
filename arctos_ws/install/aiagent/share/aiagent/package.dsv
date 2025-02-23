@@ -4,3 +4,6 @@ source;share/aiagent/hook/pythonpath.sh
 source;share/aiagent/hook/ament_prefix_path.ps1
 source;share/aiagent/hook/ament_prefix_path.dsv
 source;share/aiagent/hook/ament_prefix_path.sh
+source;../../build/aiagent/share/aiagent/hook/pythonpath_develop.ps1
+source;../../build/aiagent/share/aiagent/hook/pythonpath_develop.dsv
+source;../../build/aiagent/share/aiagent/hook/pythonpath_develop.sh

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-# EASY-INSTALL-ENTRY-SCRIPT: 'aiagent==0.0.0','console_scripts','writer'
+# EASY-INSTALL-ENTRY-SCRIPT: 'aiagent','console_scripts','writer'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'aiagent==0.0.0'
+__requires__ = 'aiagent'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('aiagent==0.0.0', 'console_scripts', 'writer')())
+    sys.exit(load_entry_point('aiagent', 'console_scripts', 'writer')())

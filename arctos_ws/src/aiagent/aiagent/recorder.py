@@ -1,7 +1,6 @@
 from .base import BaseNode
 import rclpy
-from rclpy.node import Node
-from std_msgs.msg import String, Bool, Int64
+from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
 
 import pyaudio
@@ -168,9 +167,13 @@ def clean_asla():
 
 def main(args=None):
 	clean_asla()
-	rclpy.init(args=args)
-	lone_recorder = Recorder()
-	rclpy.spin(lone_recorder)
+	try:
+		rclpy.init(args=args)
+		lone_recorder = Recorder()
+		rclpy.spin(lone_recorder)
+	except KeyboardInterrupt:
+		lone_recorder.destroy_node()
+		pass
 
 if __name__ == '__main__':
 	main()

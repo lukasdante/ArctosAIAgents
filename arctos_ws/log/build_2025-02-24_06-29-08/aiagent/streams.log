@@ -1,0 +1,33 @@
+[1.368s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/src/aiagent': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aiagent build --build-base /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build install --record /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/install.log --single-version-externally-managed install_data
+[1.581s] running egg_info
+[1.581s] writing ../../build/aiagent/aiagent.egg-info/PKG-INFO
+[1.581s] writing dependency_links to ../../build/aiagent/aiagent.egg-info/dependency_links.txt
+[1.581s] writing entry points to ../../build/aiagent/aiagent.egg-info/entry_points.txt
+[1.581s] writing requirements to ../../build/aiagent/aiagent.egg-info/requires.txt
+[1.581s] writing top-level names to ../../build/aiagent/aiagent.egg-info/top_level.txt
+[1.583s] reading manifest file '../../build/aiagent/aiagent.egg-info/SOURCES.txt'
+[1.584s] writing manifest file '../../build/aiagent/aiagent.egg-info/SOURCES.txt'
+[1.584s] running build
+[1.584s] running build_py
+[1.584s] copying aiagent/writer.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+[1.585s] copying aiagent/talker.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+[1.585s] copying aiagent/recorder.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+[1.585s] running install
+[1.585s] running install_lib
+[1.585s] copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/writer.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+[1.585s] copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/talker.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+[1.585s] copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/recorder.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+[1.585s] byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/writer.py to writer.cpython-310.pyc
+[1.585s] byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/talker.py to talker.cpython-310.pyc
+[1.586s] byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/recorder.py to recorder.cpython-310.pyc
+[1.587s] running install_data
+[1.587s] running install_egg_info
+[1.588s] removing '/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent-0.0.0-py3.10.egg-info' (and everything under it)
+[1.588s] Copying ../../build/aiagent/aiagent.egg-info to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent-0.0.0-py3.10.egg-info
+[1.589s] running install_scripts
+[1.602s] Installing agent script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[1.603s] Installing recorder script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[1.603s] Installing talker script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[1.603s] Installing writer script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[1.603s] writing list of installed files to '/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/install.log'
+[1.621s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/src/aiagent' returned '0': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aiagent build --build-base /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build install --record /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/install.log --single-version-externally-managed install_data

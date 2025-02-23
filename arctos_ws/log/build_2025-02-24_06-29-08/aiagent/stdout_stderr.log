@@ -1,0 +1,31 @@
+running egg_info
+writing ../../build/aiagent/aiagent.egg-info/PKG-INFO
+writing dependency_links to ../../build/aiagent/aiagent.egg-info/dependency_links.txt
+writing entry points to ../../build/aiagent/aiagent.egg-info/entry_points.txt
+writing requirements to ../../build/aiagent/aiagent.egg-info/requires.txt
+writing top-level names to ../../build/aiagent/aiagent.egg-info/top_level.txt
+reading manifest file '../../build/aiagent/aiagent.egg-info/SOURCES.txt'
+writing manifest file '../../build/aiagent/aiagent.egg-info/SOURCES.txt'
+running build
+running build_py
+copying aiagent/writer.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+copying aiagent/talker.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+copying aiagent/recorder.py -> /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent
+running install
+running install_lib
+copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/writer.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/talker.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+copying /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build/lib/aiagent/recorder.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent
+byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/writer.py to writer.cpython-310.pyc
+byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/talker.py to talker.cpython-310.pyc
+byte-compiling /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/recorder.py to recorder.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/aiagent/aiagent.egg-info to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent-0.0.0-py3.10.egg-info
+running install_scripts
+Installing agent script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing recorder script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing talker script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing writer script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+writing list of installed files to '/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/install.log'
