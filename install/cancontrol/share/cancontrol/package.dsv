@@ -1,0 +1,6 @@
+source;share/cancontrol/hook/pythonpath.ps1
+source;share/cancontrol/hook/pythonpath.dsv
+source;share/cancontrol/hook/pythonpath.sh
+source;share/cancontrol/hook/ament_prefix_path.ps1
+source;share/cancontrol/hook/ament_prefix_path.dsv
+source;share/cancontrol/hook/ament_prefix_path.sh

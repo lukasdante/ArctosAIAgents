@@ -1,0 +1,33 @@
+[1.464s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/src/tests': PYTHONPATH=/home/louis/Projects/arctoshumble/build/tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tests build --build-base /home/louis/Projects/arctoshumble/build/tests/build install --record /home/louis/Projects/arctoshumble/build/tests/install.log --single-version-externally-managed install_data
+[1.793s] running egg_info
+[1.795s] creating ../../../build/tests/tests.egg-info
+[1.795s] writing ../../../build/tests/tests.egg-info/PKG-INFO
+[1.795s] writing dependency_links to ../../../build/tests/tests.egg-info/dependency_links.txt
+[1.796s] writing entry points to ../../../build/tests/tests.egg-info/entry_points.txt
+[1.796s] writing requirements to ../../../build/tests/tests.egg-info/requires.txt
+[1.796s] writing top-level names to ../../../build/tests/tests.egg-info/top_level.txt
+[1.797s] writing manifest file '../../../build/tests/tests.egg-info/SOURCES.txt'
+[1.800s] reading manifest file '../../../build/tests/tests.egg-info/SOURCES.txt'
+[1.801s] writing manifest file '../../../build/tests/tests.egg-info/SOURCES.txt'
+[1.801s] running build
+[1.801s] running build_py
+[1.801s] creating /home/louis/Projects/arctoshumble/build/tests/build
+[1.801s] creating /home/louis/Projects/arctoshumble/build/tests/build/lib
+[1.801s] creating /home/louis/Projects/arctoshumble/build/tests/build/lib/tests
+[1.802s] copying tests/__init__.py -> /home/louis/Projects/arctoshumble/build/tests/build/lib/tests
+[1.802s] running install
+[1.803s] running install_lib
+[1.804s] creating /home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages/tests
+[1.804s] copying /home/louis/Projects/arctoshumble/build/tests/build/lib/tests/__init__.py -> /home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages/tests
+[1.804s] byte-compiling /home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages/tests/__init__.py to __init__.cpython-310.pyc
+[1.804s] running install_data
+[1.804s] creating /home/louis/Projects/arctoshumble/install/tests/share/ament_index
+[1.804s] creating /home/louis/Projects/arctoshumble/install/tests/share/ament_index/resource_index
+[1.804s] creating /home/louis/Projects/arctoshumble/install/tests/share/ament_index/resource_index/packages
+[1.804s] copying resource/tests -> /home/louis/Projects/arctoshumble/install/tests/share/ament_index/resource_index/packages
+[1.804s] copying package.xml -> /home/louis/Projects/arctoshumble/install/tests/share/tests
+[1.805s] running install_egg_info
+[1.805s] Copying ../../../build/tests/tests.egg-info to /home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages/tests-0.0.0-py3.10.egg-info
+[1.806s] running install_scripts
+[1.829s] writing list of installed files to '/home/louis/Projects/arctoshumble/build/tests/install.log'
+[1.880s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/src/tests' returned '0': PYTHONPATH=/home/louis/Projects/arctoshumble/build/tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/install/tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/tests build --build-base /home/louis/Projects/arctoshumble/build/tests/build install --record /home/louis/Projects/arctoshumble/build/tests/install.log --single-version-externally-managed install_data

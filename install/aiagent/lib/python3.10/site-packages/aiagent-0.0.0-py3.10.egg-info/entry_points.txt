@@ -1,0 +1,6 @@
+[console_scripts]
+agent = aiagent.agents:main
+recorder = aiagent.recorder:main
+talker = aiagent.talker:main
+writer = aiagent.writer:main
+

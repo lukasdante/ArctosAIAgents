@@ -1,0 +1,33 @@
+[1.457s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/src/vision': PYTHONPATH=/home/louis/Projects/arctoshumble/build/vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/vision build --build-base /home/louis/Projects/arctoshumble/build/vision/build install --record /home/louis/Projects/arctoshumble/build/vision/install.log --single-version-externally-managed install_data
+[1.784s] running egg_info
+[1.784s] creating ../../../build/vision/vision.egg-info
+[1.785s] writing ../../../build/vision/vision.egg-info/PKG-INFO
+[1.785s] writing dependency_links to ../../../build/vision/vision.egg-info/dependency_links.txt
+[1.785s] writing entry points to ../../../build/vision/vision.egg-info/entry_points.txt
+[1.785s] writing requirements to ../../../build/vision/vision.egg-info/requires.txt
+[1.785s] writing top-level names to ../../../build/vision/vision.egg-info/top_level.txt
+[1.785s] writing manifest file '../../../build/vision/vision.egg-info/SOURCES.txt'
+[1.788s] reading manifest file '../../../build/vision/vision.egg-info/SOURCES.txt'
+[1.789s] writing manifest file '../../../build/vision/vision.egg-info/SOURCES.txt'
+[1.790s] running build
+[1.790s] running build_py
+[1.791s] creating /home/louis/Projects/arctoshumble/build/vision/build
+[1.791s] creating /home/louis/Projects/arctoshumble/build/vision/build/lib
+[1.791s] creating /home/louis/Projects/arctoshumble/build/vision/build/lib/vision
+[1.792s] copying vision/__init__.py -> /home/louis/Projects/arctoshumble/build/vision/build/lib/vision
+[1.792s] running install
+[1.792s] running install_lib
+[1.794s] creating /home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages/vision
+[1.794s] copying /home/louis/Projects/arctoshumble/build/vision/build/lib/vision/__init__.py -> /home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages/vision
+[1.794s] byte-compiling /home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages/vision/__init__.py to __init__.cpython-310.pyc
+[1.794s] running install_data
+[1.795s] creating /home/louis/Projects/arctoshumble/install/vision/share/ament_index
+[1.795s] creating /home/louis/Projects/arctoshumble/install/vision/share/ament_index/resource_index
+[1.795s] creating /home/louis/Projects/arctoshumble/install/vision/share/ament_index/resource_index/packages
+[1.795s] copying resource/vision -> /home/louis/Projects/arctoshumble/install/vision/share/ament_index/resource_index/packages
+[1.795s] copying package.xml -> /home/louis/Projects/arctoshumble/install/vision/share/vision
+[1.795s] running install_egg_info
+[1.799s] Copying ../../../build/vision/vision.egg-info to /home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages/vision-0.0.0-py3.10.egg-info
+[1.801s] running install_scripts
+[1.822s] writing list of installed files to '/home/louis/Projects/arctoshumble/build/vision/install.log'
+[1.852s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/src/vision' returned '0': PYTHONPATH=/home/louis/Projects/arctoshumble/build/vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/install/vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/vision build --build-base /home/louis/Projects/arctoshumble/build/vision/build install --record /home/louis/Projects/arctoshumble/build/vision/install.log --single-version-externally-managed install_data

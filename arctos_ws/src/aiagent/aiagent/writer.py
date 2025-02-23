@@ -7,6 +7,7 @@ import base64
 import io
 import soundfile as sf
 import torch
+import librosa
 
 class Writer(Node):
     def __init__(self):
@@ -31,22 +32,26 @@ class Writer(Node):
 
         self.get_logger().info("Writer initialized.")
 
-    def write(self):
+    def write(self, msg):
         if self.inference == 'local':
-            self.write_local()
+            self.transcribe_local(msg)
 
         if self.inference == 'cloud':
-            self.write_cloud()
+            self.transcribe_cloud(msg)
 
-    def write_local(self, msg: String):
-        # local inference needs an audio file
-        audio_bytes = base64.b64decode(msg.data)
+    def decode_audio_from_string(self, msg: str):
+        audio_bytes = base64.b64decode(msg)
         audio_buffer = io.BytesIO(audio_bytes)
         audio_data, sample_rate = sf.read(audio_buffer)
 
+        return audio_data, sample_rate
+
+    def transcribe_local(self, msg: String):
+        # local inference needs an audio file
+        audio_data, sample_rate = self.decode_audio_from_string(msg.data)
+
         # Convert to 16 kHz (Whisper expects 16kHz mono audio)
         if self.sample_rate != 16000:
-            import librosa
             audio_data = librosa.resample(audio_data, orig_sr=sample_rate, target_sr=16000)
 
         # Transcribe using Whisper
@@ -54,8 +59,11 @@ class Writer(Node):
         result = self.local_model.transcribe(audio_tensor)
 
         # Print the transcribed text
-        print(result["text"])
-        pass
+        transcription = String()
+        transcription.data = result["text"]
+        self.publisher.publish(transcription)
 
-    def write_cloud(self):
+        self.get_logger().info(f'{result["text"]}')
+
+    def transcribe_cloud():
         pass
