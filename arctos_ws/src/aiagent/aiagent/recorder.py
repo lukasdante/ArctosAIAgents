@@ -48,7 +48,6 @@ class Recorder(BaseNode):
 		except:
 			return
 
-
 	def open_audio_stream(self):
 		"""Open the audio stream."""
 		audio = pyaudio.PyAudio()

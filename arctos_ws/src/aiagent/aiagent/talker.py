@@ -2,6 +2,7 @@ import rclpy
 from rcl_interfaces.msg import ParameterDescriptor
 from std_msgs.msg import String, Bool
 from utils.utils.nodes import BaseNode
+from interfaces.srv import TalkString
 
 from kokoro import KPipeline
 import soundfile as sf
@@ -32,6 +33,7 @@ class Talker(BaseNode):
 		self.publisher = self.create_publisher(Bool, 'conversation/reset', 10)            
 		self.response_subscriber = self.create_subscription(String, 'conversation/response', self.talk, 10)
 		self.parameter_subscriber = self.create_subscription(String, 'conversation/parameters', self.change_property, 10)
+		self.srv = self.create_service(TalkString, 'talk', self.talk_srv)
 
 		self.get_logger().info('Talker node initialized.')
 
@@ -54,26 +56,36 @@ class Talker(BaseNode):
 			
 		except:
 			return
+		
+	def talk_srv(self, request, response):
+		response.success = self.talk(request.text)
+		self.get_logger().info(f'Incoming request received by Talker: {request.text}')
+
 	
 	def talk(self, msg):
 		""" Talks given a response in text. """
+		if type(msg) is String:
+			msg = msg.data
+
 		if self.inference == 'local':
-			self.talk_local(msg)
+			self.talk_local(msg, voice='af_heart', speed=1)
 
 		if self.inference == 'cloud':
-			self.talk_cloud(msg)
+			self.talk_cloud(msg, voice='af_heart', speed=1)
+
+		return True
 
 	def play_audio(self, audio: torch.Tensor):
 		audio = audio.cpu().numpy()
 		sd.play(audio, samplerate=self.sample_rate)
 		sd.wait()
 
-	def talk_local(self, msg: String):
+	def talk_local(self, msg: String, voice, speed):
 		pipeline = KPipeline(lang_code='a')
 		generator = pipeline(
 			msg.data,
-			voice='af_heart',
-			speed=1,
+			voice=voice,
+			speed=speed,
 		)
 		
 		graphemes, phonemes, audio = next(generator)
