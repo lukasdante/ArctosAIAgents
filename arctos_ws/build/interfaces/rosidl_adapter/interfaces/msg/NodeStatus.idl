@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/NodeStatus.msg
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module msg {
+    struct NodeStatus {
+      boolean node_status;
+
+      sequence<string> node_list;
+    };
+  };
+};

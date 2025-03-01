@@ -76,11 +76,21 @@ CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__b
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__type_support.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/node_status.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__type_support.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/add_three_ints.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__type_support.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/talk_string.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__type_support.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -100,7 +110,9 @@ rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/share/rosidl_genera
 rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/interfaces/msg/num.hpp: rosidl_adapter/interfaces/msg/Num.idl
 rosidl_generator_cpp/interfaces/msg/num.hpp: rosidl_adapter/interfaces/msg/Sphere.idl
+rosidl_generator_cpp/interfaces/msg/num.hpp: rosidl_adapter/interfaces/msg/NodeStatus.idl
 rosidl_generator_cpp/interfaces/msg/num.hpp: rosidl_adapter/interfaces/srv/AddThreeInts.idl
+rosidl_generator_cpp/interfaces/msg/num.hpp: rosidl_adapter/interfaces/srv/TalkString.idl
 rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/interfaces/msg/num.hpp: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -191,6 +203,21 @@ rosidl_generator_cpp/interfaces/msg/detail/sphere__traits.hpp: rosidl_generator_
 rosidl_generator_cpp/interfaces/msg/detail/sphere__type_support.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/sphere__type_support.hpp
 
+rosidl_generator_cpp/interfaces/msg/node_status.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/node_status.hpp
+
+rosidl_generator_cpp/interfaces/msg/detail/node_status__builder.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/node_status__builder.hpp
+
+rosidl_generator_cpp/interfaces/msg/detail/node_status__struct.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/node_status__struct.hpp
+
+rosidl_generator_cpp/interfaces/msg/detail/node_status__traits.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/node_status__traits.hpp
+
+rosidl_generator_cpp/interfaces/msg/detail/node_status__type_support.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/node_status__type_support.hpp
+
 rosidl_generator_cpp/interfaces/srv/add_three_ints.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/add_three_ints.hpp
 
@@ -206,7 +233,26 @@ rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__traits.hpp: rosidl_ge
 rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__type_support.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__type_support.hpp
 
+rosidl_generator_cpp/interfaces/srv/talk_string.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/talk_string.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/talk_string__builder.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/talk_string__builder.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/talk_string__struct.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/talk_string__struct.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/talk_string__traits.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/talk_string__traits.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/talk_string__type_support.hpp: rosidl_generator_cpp/interfaces/msg/num.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/talk_string__type_support.hpp
+
 interfaces__cpp: CMakeFiles/interfaces__cpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/node_status__type_support.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/num__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/num__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/num__traits.hpp
@@ -215,6 +261,7 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sphere__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/node_status.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/num.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sphere.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/add_three_ints.hpp
@@ -222,6 +269,11 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__buil
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/add_three_ints__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/talk_string__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/talk_string.hpp
 interfaces__cpp: CMakeFiles/interfaces__cpp.dir/build.make
 .PHONY : interfaces__cpp
 

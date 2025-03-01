@@ -1,3 +1,5 @@
+msg/NodeStatus.idl
+msg/NodeStatus.msg
 msg/Num.idl
 msg/Num.msg
 msg/Sphere.idl
@@ -6,3 +8,7 @@ srv/AddThreeInts.idl
 srv/AddThreeInts.srv
 srv/AddThreeInts_Request.msg
 srv/AddThreeInts_Response.msg
+srv/TalkString.idl
+srv/TalkString.srv
+srv/TalkString_Request.msg
+srv/TalkString_Response.msg

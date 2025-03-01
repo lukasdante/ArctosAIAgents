@@ -209,6 +209,14 @@ CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
  /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/sphere__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
  /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/sphere__functions.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__type_support.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__functions.h \
  /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__type_support.h \
  /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__struct.h \
- /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.h
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__type_support.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__struct.h \
+ /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.h

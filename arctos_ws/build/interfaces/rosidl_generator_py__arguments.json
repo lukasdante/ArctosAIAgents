@@ -5,7 +5,9 @@
   "idl_tuples": [
     "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:msg/Num.idl",
     "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:msg/Sphere.idl",
-    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:srv/AddThreeInts.idl"
+    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:msg/NodeStatus.idl",
+    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:srv/AddThreeInts.idl",
+    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces:srv/TalkString.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -85,7 +87,9 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/Num.idl",
     "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/Sphere.idl",
+    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/NodeStatus.idl",
     "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/srv/AddThreeInts.idl",
+    "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/srv/TalkString.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

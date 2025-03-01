@@ -68,9 +68,13 @@ include CMakeFiles/interfaces.dir/progress.make
 
 CMakeFiles/interfaces: /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/Num.msg
 CMakeFiles/interfaces: /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/Sphere.msg
+CMakeFiles/interfaces: /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/NodeStatus.msg
 CMakeFiles/interfaces: /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/srv/AddThreeInts.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/AddThreeInts_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/AddThreeInts_Response.msg
+CMakeFiles/interfaces: /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/srv/TalkString.srv
+CMakeFiles/interfaces: rosidl_cmake/srv/TalkString_Request.msg
+CMakeFiles/interfaces: rosidl_cmake/srv/TalkString_Response.msg
 CMakeFiles/interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/interfaces: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl

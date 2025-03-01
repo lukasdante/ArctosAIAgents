@@ -84,7 +84,9 @@ rosidl_generator_c/interfaces/msg/num.h: /opt/ros/humble/share/rosidl_generator_
 rosidl_generator_c/interfaces/msg/num.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/interfaces/msg/num.h: rosidl_adapter/interfaces/msg/Num.idl
 rosidl_generator_c/interfaces/msg/num.h: rosidl_adapter/interfaces/msg/Sphere.idl
+rosidl_generator_c/interfaces/msg/num.h: rosidl_adapter/interfaces/msg/NodeStatus.idl
 rosidl_generator_c/interfaces/msg/num.h: rosidl_adapter/interfaces/srv/AddThreeInts.idl
+rosidl_generator_c/interfaces/msg/num.h: rosidl_adapter/interfaces/srv/TalkString.idl
 rosidl_generator_c/interfaces/msg/num.h: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_c/interfaces/msg/num.h: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_c/interfaces/msg/num.h: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -169,6 +171,18 @@ rosidl_generator_c/interfaces/msg/detail/sphere__struct.h: rosidl_generator_c/in
 rosidl_generator_c/interfaces/msg/detail/sphere__type_support.h: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/sphere__type_support.h
 
+rosidl_generator_c/interfaces/msg/node_status.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/node_status.h
+
+rosidl_generator_c/interfaces/msg/detail/node_status__functions.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/node_status__functions.h
+
+rosidl_generator_c/interfaces/msg/detail/node_status__struct.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/node_status__struct.h
+
+rosidl_generator_c/interfaces/msg/detail/node_status__type_support.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/node_status__type_support.h
+
 rosidl_generator_c/interfaces/srv/add_three_ints.h: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/add_three_ints.h
 
@@ -181,14 +195,32 @@ rosidl_generator_c/interfaces/srv/detail/add_three_ints__struct.h: rosidl_genera
 rosidl_generator_c/interfaces/srv/detail/add_three_ints__type_support.h: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/add_three_ints__type_support.h
 
+rosidl_generator_c/interfaces/srv/talk_string.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/talk_string.h
+
+rosidl_generator_c/interfaces/srv/detail/talk_string__functions.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/talk_string__functions.h
+
+rosidl_generator_c/interfaces/srv/detail/talk_string__struct.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/talk_string__struct.h
+
+rosidl_generator_c/interfaces/srv/detail/talk_string__type_support.h: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/talk_string__type_support.h
+
 rosidl_generator_c/interfaces/msg/detail/num__functions.c: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/num__functions.c
 
 rosidl_generator_c/interfaces/msg/detail/sphere__functions.c: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/sphere__functions.c
 
+rosidl_generator_c/interfaces/msg/detail/node_status__functions.c: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/node_status__functions.c
+
 rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c: rosidl_generator_c/interfaces/msg/num.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c
+
+rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c: rosidl_generator_c/interfaces/msg/num.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c
 
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/num__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/num__functions.c.o: rosidl_generator_c/interfaces/msg/detail/num__functions.c
@@ -218,10 +250,24 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sphere__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/sphere__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sphere__functions.c.s
 
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o: rosidl_generator_c/interfaces/msg/detail/node_status__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o -c /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.i
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.s
+
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o: rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o -c /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c
 
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.i: cmake_force
@@ -232,18 +278,36 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.s
 
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o: rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o -c /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.i
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.s
+
 # Object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/num__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sphere__functions.c.o" \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o"
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o"
 
 # External object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/num__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sphere__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/node_status__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/build.make
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
@@ -251,7 +315,7 @@ libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces_
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libinterfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libinterfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +326,10 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/interfaces__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/interfaces__rosidl_generator_c.dir/clean
 
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/node_status__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/node_status__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/node_status__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/node_status__type_support.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/num__functions.c
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/num__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/num__struct.h
@@ -270,6 +338,7 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfa
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/sphere__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/sphere__struct.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/sphere__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/node_status.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/num.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/sphere.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/add_three_ints.h
@@ -277,6 +346,11 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfa
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/add_three_ints__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/add_three_ints__struct.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/add_three_ints__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/talk_string__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/talk_string__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/talk_string__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/talk_string__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/talk_string.h
 	cd /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces /home/louis/Projects/arctoshumble/arctos_ws/src/interfaces /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/CMakeFiles/interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/interfaces__rosidl_generator_c.dir/depend
 

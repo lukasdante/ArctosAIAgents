@@ -1,0 +1,1 @@
+/home/louis/Projects/arctoshumble/arctos_ws/build/utils/launch/manager_launch.py

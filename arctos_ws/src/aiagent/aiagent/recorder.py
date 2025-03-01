@@ -75,7 +75,7 @@ class Recorder(BaseNode):
 		frames = []
 		silent_chunks = 0
 		initial_time = self.get_clock().now().nanoseconds
-		while (True):
+		while True:
 			data = stream.read(self.chunk_size)
 
 			frames.append(data)

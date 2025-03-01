@@ -3,6 +3,8 @@
   "non_idl_tuples": [
     "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:msg/Num.msg",
     "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:msg/Sphere.msg",
-    "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:srv/AddThreeInts.srv"
+    "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:msg/NodeStatus.msg",
+    "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:srv/AddThreeInts.srv",
+    "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces:srv/TalkString.srv"
   ]
 }

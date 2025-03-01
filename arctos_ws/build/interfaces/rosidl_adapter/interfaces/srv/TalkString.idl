@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/TalkString.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct TalkString_Request {
+      string text;
+    };
+    struct TalkString_Response {
+      boolean success;
+    };
+  };
+};

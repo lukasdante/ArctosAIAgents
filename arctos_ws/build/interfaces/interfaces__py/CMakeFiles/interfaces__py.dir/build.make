@@ -71,12 +71,16 @@ interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interf
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_num.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sphere.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_node_status.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_add_three_ints.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_talk_string.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/__init__.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/__init__.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_num_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sphere_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_node_status_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_add_three_ints_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_talk_string_s.c
 
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -93,7 +97,9 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Num.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/Sphere.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/NodeStatus.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/AddThreeInts.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/TalkString.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -169,8 +175,14 @@ rosidl_generator_py/interfaces/msg/_num.py: rosidl_generator_py/interfaces/_inte
 rosidl_generator_py/interfaces/msg/_sphere.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_sphere.py
 
+rosidl_generator_py/interfaces/msg/_node_status.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_node_status.py
+
 rosidl_generator_py/interfaces/srv/_add_three_ints.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_add_three_ints.py
+
+rosidl_generator_py/interfaces/srv/_talk_string.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_talk_string.py
 
 rosidl_generator_py/interfaces/msg/__init__.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/__init__.py
@@ -184,14 +196,22 @@ rosidl_generator_py/interfaces/msg/_num_s.c: rosidl_generator_py/interfaces/_int
 rosidl_generator_py/interfaces/msg/_sphere_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_sphere_s.c
 
+rosidl_generator_py/interfaces/msg/_node_status_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_node_status_s.c
+
 rosidl_generator_py/interfaces/srv/_add_three_ints_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_add_three_ints_s.c
+
+rosidl_generator_py/interfaces/srv/_talk_string_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_talk_string_s.c
 
 interfaces__py: interfaces__py/CMakeFiles/interfaces__py
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py: rosidl_generator_py/interfaces/msg/__init__.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_node_status.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_node_status_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_num.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_num_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_sphere.py
@@ -199,6 +219,8 @@ interfaces__py: rosidl_generator_py/interfaces/msg/_sphere_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/__init__.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_add_three_ints.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_add_three_ints_s.c
+interfaces__py: rosidl_generator_py/interfaces/srv/_talk_string.py
+interfaces__py: rosidl_generator_py/interfaces/srv/_talk_string_s.c
 interfaces__py: interfaces__py/CMakeFiles/interfaces__py.dir/build.make
 .PHONY : interfaces__py
 

@@ -1,0 +1,20 @@
+[0.588s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/build/utils': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/louis/Projects/arctoshumble/arctos_ws/build/utils/build --no-deps symlink_data --force
+[0.822s] running develop
+[0.986s] running egg_info
+[0.986s] writing utils.egg-info/PKG-INFO
+[0.986s] writing dependency_links to utils.egg-info/dependency_links.txt
+[0.986s] writing entry points to utils.egg-info/entry_points.txt
+[0.986s] writing requirements to utils.egg-info/requires.txt
+[0.986s] writing top-level names to utils.egg-info/top_level.txt
+[0.987s] reading manifest file 'utils.egg-info/SOURCES.txt'
+[0.987s] writing manifest file 'utils.egg-info/SOURCES.txt'
+[0.989s] running build_ext
+[0.989s] Creating /home/louis/Projects/arctoshumble/arctos_ws/install/utils/lib/python3.10/site-packages/utils.egg-link (link to .)
+[0.989s] Installing manager script to /home/louis/Projects/arctoshumble/arctos_ws/install/utils/lib/utils
+[0.989s] 
+[0.989s] Installed /home/louis/Projects/arctoshumble/arctos_ws/build/utils
+[0.989s] running symlink_data
+[0.990s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/utils/resource/utils -> /home/louis/Projects/arctoshumble/arctos_ws/install/utils/share/ament_index/resource_index/packages
+[0.990s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/utils/package.xml -> /home/louis/Projects/arctoshumble/arctos_ws/install/utils/share/utils
+[0.990s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/utils/launch/manager_launch.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/utils/share/utils
+[1.011s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/build/utils' returned '0': PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/louis/Projects/arctoshumble/arctos_ws/build/utils/build --no-deps symlink_data --force

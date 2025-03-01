@@ -15,6 +15,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/__init__.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_node_status.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_node_status_s.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_num.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_num_s.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_sphere.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
@@ -22,6 +24,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/__init__.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_add_three_ints.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_add_three_ints_s.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_talk_string.py" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_talk_string_s.c" "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 
