@@ -26,11 +26,19 @@ def generate_launch_description():
             ]
         ),
         Node(
+            package='aiagent',
+            executable='agent',
+            name='agent',
+            parameters=[
+
+            ]
+        ),
+        Node(
             package='utils',
             executable='manager',
             name='manager',
             parameters=[
-                {'nodes': 'manager,recorder,talker,writer'}
+                {'nodes': 'manager,recorder,talker,writer,agent'}
             ]
         )
     ])

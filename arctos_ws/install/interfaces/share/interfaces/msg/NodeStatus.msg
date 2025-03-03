@@ -1,2 +1,1 @@
-bool node_status
-string[] node_list
+/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/NodeStatus.msg

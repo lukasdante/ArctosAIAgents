@@ -367,6 +367,9 @@ ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/s
 # install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/NodeStatus.idl" "DESTINATION" "share/interfaces/msg")
 ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/NodeStatus.idl" "DESTINATION" "share/interfaces/msg")
 
+# install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/Response.idl" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/Response.idl" "DESTINATION" "share/interfaces/msg")
+
 # install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/srv/AddThreeInts.idl" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/srv/AddThreeInts.idl" "DESTINATION" "share/interfaces/srv")
 
@@ -381,6 +384,9 @@ ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/s
 
 # install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/NodeStatus.msg" "DESTINATION" "share/interfaces/msg")
 ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/NodeStatus.msg" "DESTINATION" "share/interfaces/msg")
+
+# install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/Response.msg" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/Response.msg" "DESTINATION" "share/interfaces/msg")
 
 # install(FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/srv/AddThreeInts.srv" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces" FILES "/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/srv/AddThreeInts.srv" "DESTINATION" "share/interfaces/srv")

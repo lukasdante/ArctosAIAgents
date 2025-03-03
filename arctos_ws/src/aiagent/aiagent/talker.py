@@ -5,9 +5,16 @@ from utils.nodes import BaseNode
 from interfaces.srv import TalkString
 
 from kokoro import KPipeline
-import soundfile as sf
 import sounddevice as sd
 import torch
+import json
+import requests
+import io
+import json
+import time
+
+from google.auth import jwt as google_jwt
+from google.auth import crypt
 
 class Talker(BaseNode):
 	def __init__(self):
@@ -107,6 +114,102 @@ class Talker(BaseNode):
 	def manager_talk(self, msg):
 		self.talk('All nodes have been initialized what can I do for you?')
 
+	### CLOUD
+
+	def write_json(self, text):
+		""" Writes JSON payload for Text-to-Speech Inference """
+		
+		data = {
+			"input": {
+				"text": f"{text}"
+			},
+			"voice": {
+				"languageCode": f"{self.language}",
+				"name": f"{self.accent}",
+				"ssmlGender": f"{self.gender}"
+			},
+			"audioConfig": {
+				"audioEncoding": f"{self.encoding_format}"
+			}
+		}
+
+		return json.dumps(data)
+
+	def vocalize(self, data):
+		""" Returns speech of a given API response. """
+
+		now = int(time.time())
+		payload = {
+			"iss": self.service_account_info["client_email"],
+			"scope": self.scopes,
+			"aud": self.token_url,
+			"iat": now,
+			"exp": now + self.token_validity
+		}
+
+		# Sign the JWT using the private key from the service account
+		signed_jwt = google_jwt.encode(crypt.RSASigner.from_service_account_info(self.service_account_info), payload)
+
+		# Request access token
+		response = requests.post(self.token_url, data={
+			"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+			"assertion": signed_jwt
+		})
+
+		# Check response
+		if response.status_code == 200:
+			access_token = response.json()["access_token"]
+
+			# Use the access token to call the Text-to-Speech API
+			api_headers = {
+				"Authorization": f"Bearer {access_token}",
+				"Content-Type": "application/json; charset=utf-8"
+			}
+
+			# Make the POST request
+			api_response = requests.post(self.api_endpoint, headers=api_headers, data=data)
+
+			api_response_text = api_response.text
+
+			# Print a message indicating completion
+			if api_response.status_code == 200:
+				self.get_logger().info(f"Response saved.")
+			else:
+				self.get_logger().error(f"API Error: {api_response.status_code} {api_response.text}")
+		else:
+			self.get_logger().error(f"Error: {response.status_code} {response.text}")
+
+		
+
+		return api_response_text
+
+	def talk(self, msg):
+		""" Talks given a response in text. """
+
+		# Request a text-to-speech response
+		if isinstance(msg, str):
+			response = self.write_json(msg)
+		else:
+			response = self.write_json(msg.data)
+		speech = self.vocalize(response)
+		# self.save_audio(speech)
+
+		# Parse the API response and decode base64 audio content
+		response_json = json.loads(speech)
+		audio_data = base64.b64decode(response_json['audioContent'])
+
+		# Use io.BytesIO to handle audio data in memory
+		audio_stream = io.BytesIO(audio_data)
+
+
+		# Prepare the message
+		msg = Bool()
+		msg.data = True
+
+		# Publish the message
+		self.publisher.publish(msg)
+		self.get_logger().info("Playback finished, resetting conversation.")
+
 def main(args=None):
 
 	try:
@@ -114,8 +217,9 @@ def main(args=None):
 		lone_talker = Talker()
 		rclpy.spin(lone_talker)
 	except KeyboardInterrupt:
-		lone_talker.destroy_node()
 		pass
+
+	lone_talker.destroy_node()
 
 if __name__ == '__main__':
 	main()

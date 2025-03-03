@@ -1,9 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000283] (-) JobUnselected: {'identifier': 'aiagent'}
-[0.000312] (-) JobUnselected: {'identifier': 'cancontrol'}
-[0.000323] (-) JobUnselected: {'identifier': 'interfaces'}
-[0.000338] (-) JobUnselected: {'identifier': 'py_pubsub'}
-[0.000347] (-) JobUnselected: {'identifier': 'tests'}
-[0.000355] (-) JobUnselected: {'identifier': 'utils'}
-[0.000363] (-) JobUnselected: {'identifier': 'vision'}
-[0.000674] (-) EventReactorShutdown: {}

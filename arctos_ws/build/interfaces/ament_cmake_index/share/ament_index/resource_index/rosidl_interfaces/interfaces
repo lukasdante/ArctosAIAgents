@@ -2,6 +2,8 @@ msg/NodeStatus.idl
 msg/NodeStatus.msg
 msg/Num.idl
 msg/Num.msg
+msg/Response.idl
+msg/Response.msg
 msg/Sphere.idl
 msg/Sphere.msg
 srv/AddThreeInts.idl

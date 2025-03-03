@@ -1,2 +1,1 @@
-geometry_msgs/Point center
-float64 radius
+/home/louis/Projects/arctoshumble/arctos_ws/src/interfaces/msg/Sphere.msg

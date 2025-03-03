@@ -1,3 +1,1 @@
-from interfaces.msg._node_status import NodeStatus  # noqa: F401
-from interfaces.msg._num import Num  # noqa: F401
-from interfaces.msg._sphere import Sphere  # noqa: F401
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/msg/__init__.py

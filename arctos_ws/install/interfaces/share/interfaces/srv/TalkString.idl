@@ -1,15 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from interfaces/srv/TalkString.srv
-// generated code does not contain a copyright notice
-
-
-module interfaces {
-  module srv {
-    struct TalkString_Request {
-      string text;
-    };
-    struct TalkString_Response {
-      boolean success;
-    };
-  };
-};
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/srv/TalkString.idl

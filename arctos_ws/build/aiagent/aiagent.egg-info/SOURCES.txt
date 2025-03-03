@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/aiagent/aiagent.egg-info/PKG-INFO
-../../build/aiagent/aiagent.egg-info/SOURCES.txt
-../../build/aiagent/aiagent.egg-info/dependency_links.txt
-../../build/aiagent/aiagent.egg-info/entry_points.txt
-../../build/aiagent/aiagent.egg-info/requires.txt
-../../build/aiagent/aiagent.egg-info/top_level.txt
-../../build/aiagent/aiagent.egg-info/zip-safe
 aiagent/__init__.py
 aiagent/agents.py
 aiagent/recorder.py

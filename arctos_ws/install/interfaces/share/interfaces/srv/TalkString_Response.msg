@@ -1,2 +1,1 @@
-
-bool success
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_cmake/srv/TalkString_Response.msg

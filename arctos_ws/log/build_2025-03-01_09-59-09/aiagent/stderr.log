@@ -1,2 +1,0 @@
-/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent/writer.py:87: SyntaxWarning: "is not" with a literal. Did you mean "!="?
-  if result["text"] is not '' or None:

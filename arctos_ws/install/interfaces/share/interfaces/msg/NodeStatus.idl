@@ -1,14 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from interfaces/msg/NodeStatus.msg
-// generated code does not contain a copyright notice
-
-
-module interfaces {
-  module msg {
-    struct NodeStatus {
-      boolean node_status;
-
-      sequence<string> node_list;
-    };
-  };
-};
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_adapter/interfaces/msg/NodeStatus.idl

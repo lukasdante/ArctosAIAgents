@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/interfaces/msg/_node_status_s.c"
   "../rosidl_generator_py/interfaces/msg/_num.py"
   "../rosidl_generator_py/interfaces/msg/_num_s.c"
+  "../rosidl_generator_py/interfaces/msg/_response.py"
+  "../rosidl_generator_py/interfaces/msg/_response_s.c"
   "../rosidl_generator_py/interfaces/msg/_sphere.py"
   "../rosidl_generator_py/interfaces/msg/_sphere_s.c"
   "../rosidl_generator_py/interfaces/srv/__init__.py"

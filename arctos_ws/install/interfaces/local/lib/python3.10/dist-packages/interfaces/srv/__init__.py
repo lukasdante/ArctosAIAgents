@@ -1,2 +1,1 @@
-from interfaces.srv._add_three_ints import AddThreeInts  # noqa: F401
-from interfaces.srv._talk_string import TalkString  # noqa: F401
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_generator_py/interfaces/srv/__init__.py

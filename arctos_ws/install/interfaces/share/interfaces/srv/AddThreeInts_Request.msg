@@ -1,3 +1,1 @@
-int64 a
-int64 b
-int64 c
+/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/rosidl_cmake/srv/AddThreeInts_Request.msg
