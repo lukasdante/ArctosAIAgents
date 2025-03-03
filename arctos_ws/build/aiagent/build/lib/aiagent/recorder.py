@@ -1,7 +1,6 @@
-from .base import BaseNode
+from utils.utils.nodes import BaseNode
 import rclpy
-from rclpy.node import Node
-from std_msgs.msg import String, Bool, Int64
+from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
 
 import pyaudio
@@ -49,7 +48,6 @@ class Recorder(BaseNode):
 		except:
 			return
 
-
 	def open_audio_stream(self):
 		"""Open the audio stream."""
 		audio = pyaudio.PyAudio()
@@ -77,7 +75,7 @@ class Recorder(BaseNode):
 		frames = []
 		silent_chunks = 0
 		initial_time = self.get_clock().now().nanoseconds
-		while (True):
+		while True:
 			data = stream.read(self.chunk_size)
 
 			frames.append(data)
@@ -168,9 +166,13 @@ def clean_asla():
 
 def main(args=None):
 	clean_asla()
-	rclpy.init(args=args)
-	lone_recorder = Recorder()
-	rclpy.spin(lone_recorder)
+	try:
+		rclpy.init(args=args)
+		lone_recorder = Recorder()
+		rclpy.spin(lone_recorder)
+	except KeyboardInterrupt:
+		lone_recorder.destroy_node()
+		pass
 
 if __name__ == '__main__':
 	main()

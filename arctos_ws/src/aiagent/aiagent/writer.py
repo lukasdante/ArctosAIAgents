@@ -36,6 +36,7 @@ class Writer(Node):
 
 		# Declare class publishers and subscribers
 		self.publisher = self.create_publisher(String, 'conversation/transcript', 10)
+		self.reset_publisher = self.create_publisher(Bool, 'conversation/reset', 10)
 		self.subscriber = self.create_subscription(String, 'conversation/recording', self.write, 10)
 
 		self.get_logger().info("Writer node initialized.")
@@ -69,6 +70,12 @@ class Writer(Node):
 		self.get_logger().info(f'{transcript}')
 
 
+	def reset_conversation(self):
+		msg = Bool()
+		msg.data = True
+		self.reset_publisher.publish(msg)
+		self.get_logger().info("No transcription found, resetting conversation.")
+
 	def transcribe_local(self, msg: String):
 		""" Local speech-to-text inference. """
 
@@ -84,10 +91,10 @@ class Writer(Node):
 		result = self.local_model.transcribe(audio_tensor)
 
 		# Publish the transcription
-		if result["text"] is not '' or None:
+		if result["text"]:
 			self.publish_transcript(result["text"])
 		else:
-			self.get_logger().info("No transcription found, resetting conversation.")
+			self.reset_conversation()
 
 	def transcribe_cloud(self, msg: String):
 		""" Google Cloud speech-to-text inference. """

@@ -1,0 +1,21 @@
+running develop
+running egg_info
+writing aiagent.egg-info/PKG-INFO
+writing dependency_links to aiagent.egg-info/dependency_links.txt
+writing entry points to aiagent.egg-info/entry_points.txt
+writing requirements to aiagent.egg-info/requires.txt
+writing top-level names to aiagent.egg-info/top_level.txt
+reading manifest file 'aiagent.egg-info/SOURCES.txt'
+writing manifest file 'aiagent.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent.egg-link (link to .)
+Installing agent script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing recorder script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing talker script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+Installing writer script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+
+Installed /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent
+running symlink_data
+symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/resource/aiagent -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/ament_index/resource_index/packages
+symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/package.xml -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/aiagent
+symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/launch/audio_launch.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/aiagent

@@ -27,31 +27,32 @@ class NodeManager(Node):
         self.get_logger().info('Manager initialized.')
 
     def check_node_status(self):
+
         active_nodes = self.get_node_names()
 
         # If there are inactive nodes, send a False status and a list of inactive nodes
-        inactive_node_count = 0
-        inactive_nodes = []
-        for node in self.nodes:
-            if node not in active_nodes:
-                inactive_node_count += 1
-                inactive_nodes.append(node)
+        inactive_nodes = [node for node in self.nodes if node not in active_nodes]
+        inactive_node_count = len(inactive_nodes)
+
 
         if inactive_node_count > 0:
 
             if self.initialized:
                 # Publish node status
+                self.get_logger().info("Some nodes stopped. Terminating processes.")
                 msg = NodeStatus()
                 msg.node_status = False
                 msg.node_list = inactive_nodes
                 self.node_status_pub.publish(msg)
 
         elif inactive_node_count == 0 and not self.initialized:
+            self.get_logger().info("All nodes are active. Initializing system.")
             self.initialized = True
 
             msg = Bool()
-            msg.data = True
+            msg.data = self.initialized
             self.initialized_node_pub.publish(msg)
+
 
 def main(args=None):
     rclpy.init(args=args)

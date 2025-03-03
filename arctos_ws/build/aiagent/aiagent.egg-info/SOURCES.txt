@@ -10,7 +10,6 @@ setup.py
 ../../build/aiagent/aiagent.egg-info/zip-safe
 aiagent/__init__.py
 aiagent/agents.py
-aiagent/base.py
 aiagent/recorder.py
 aiagent/talker.py
 aiagent/writer.py

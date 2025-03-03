@@ -1,0 +1,23 @@
+[0.553s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent': AMENT_PREFIX_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces LD_LIBRARY_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages:/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build --no-deps symlink_data --force
+[0.790s] running develop
+[0.949s] running egg_info
+[0.949s] writing aiagent.egg-info/PKG-INFO
+[0.950s] writing dependency_links to aiagent.egg-info/dependency_links.txt
+[0.950s] writing entry points to aiagent.egg-info/entry_points.txt
+[0.950s] writing requirements to aiagent.egg-info/requires.txt
+[0.950s] writing top-level names to aiagent.egg-info/top_level.txt
+[0.951s] reading manifest file 'aiagent.egg-info/SOURCES.txt'
+[0.951s] writing manifest file 'aiagent.egg-info/SOURCES.txt'
+[0.952s] running build_ext
+[0.952s] Creating /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages/aiagent.egg-link (link to .)
+[0.953s] Installing agent script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[0.953s] Installing recorder script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[0.953s] Installing talker script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[0.953s] Installing writer script to /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/aiagent
+[0.953s] 
+[0.953s] Installed /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent
+[0.953s] running symlink_data
+[0.954s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/resource/aiagent -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/ament_index/resource_index/packages
+[0.954s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/package.xml -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/aiagent
+[0.954s] symbolically linking /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/launch/audio_launch.py -> /home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/share/aiagent
+[0.973s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent' returned '0': AMENT_PREFIX_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces LD_LIBRARY_PATH=/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent/lib/python3.10/site-packages:/home/louis/Projects/arctoshumble/arctos_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/louis/Projects/arctoshumble/arctos_ws/build/aiagent/build --no-deps symlink_data --force

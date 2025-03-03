@@ -5,8 +5,17 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='aiagent',
+            executable='writer',
+            name='writer',
+            parameters=[
+            ]
+        ),
+        Node(
+            package='aiagent',
             executable='talker',
-            name='talker'
+            name='talker',
+            parameters=[
+            ]
         ),
         Node(
             package='aiagent',
@@ -17,8 +26,11 @@ def generate_launch_description():
             ]
         ),
         Node(
-            package='aiagent',
-            executable='writer',
-            name='writer'
-        ),
+            package='utils',
+            executable='manager',
+            name='manager',
+            parameters=[
+                {'nodes': 'manager,recorder,talker,writer'}
+            ]
+        )
     ])

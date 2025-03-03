@@ -1,7 +1,7 @@
 import rclpy
 from rcl_interfaces.msg import ParameterDescriptor
 from std_msgs.msg import String, Bool
-from utils.utils.nodes import BaseNode
+from utils.nodes import BaseNode
 from interfaces.srv import TalkString
 
 from kokoro import KPipeline
@@ -19,7 +19,7 @@ class Talker(BaseNode):
 		self.declare_parameter('accent', 'en-US-Neural2-C', ParameterDescriptor(description='Accent or voice type of the text-to-speech voice agent.'))
 		self.declare_parameter('encoding_format', 'LINEAR16', ParameterDescriptor(description='Encoding format of the audio recording.'))
 		self.declare_parameter('inference', 'local', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
-		self.declare_parameter('sample_rate', 16000, ParameterDescriptor(description="Sample rate of audio playback."))
+		self.declare_parameter('sample_rate', 24000, ParameterDescriptor(description="Sample rate of audio playback."))
 
 		# Set node parameters
 		self.language = self.get_parameter('language').get_parameter_value().string_value
@@ -33,6 +33,7 @@ class Talker(BaseNode):
 		self.publisher = self.create_publisher(Bool, 'conversation/reset', 10)            
 		self.response_subscriber = self.create_subscription(String, 'conversation/response', self.talk, 10)
 		self.parameter_subscriber = self.create_subscription(String, 'conversation/parameters', self.change_property, 10)
+		self.manager_subscriber = self.create_subscription(Bool, 'manager/nodes_initialized', self.manager_talk, 10)
 		self.srv = self.create_service(TalkString, 'talk', self.talk_srv)
 
 		self.get_logger().info('Talker node initialized.')
@@ -61,38 +62,50 @@ class Talker(BaseNode):
 		response.success = self.talk(request.text)
 		self.get_logger().info(f'Incoming request received by Talker: {request.text}')
 
-	
+
+	def reset_conversation(self):
+		msg = Bool()
+		msg.data = True
+		self.publisher.publish(msg)
+		self.get_logger().info('Playback finished. Resetting conversation...')
+
 	def talk(self, msg):
 		""" Talks given a response in text. """
 		if type(msg) is String:
 			msg = msg.data
+		if type(msg) != str:
+			self.get_logger().info('The provided message cannot be parsed.')
 
 		if self.inference == 'local':
-			self.talk_local(msg, voice='af_heart', speed=1)
+			self.talk_local(msg, voice='af_heart')
 
 		if self.inference == 'cloud':
-			self.talk_cloud(msg, voice='af_heart', speed=1)
+			self.talk_cloud()
+
+		self.reset_conversation()
 
 		return True
 
-	def play_audio(self, audio: torch.Tensor):
+	def play_audio(self, audio: torch.Tensor, sample_rate):
 		audio = audio.cpu().numpy()
-		sd.play(audio, samplerate=self.sample_rate)
+		sd.play(audio, samplerate=sample_rate)
 		sd.wait()
 
-	def talk_local(self, msg: String, voice, speed):
+	def talk_local(self, msg: str, voice):
 		pipeline = KPipeline(lang_code='a')
 		generator = pipeline(
-			msg.data,
+			msg,
 			voice=voice,
-			speed=speed,
 		)
 		
 		graphemes, phonemes, audio = next(generator)
-		self.play_audio(audio)
+		self.play_audio(audio, 24000)
 
-	def talk_cloud(self, msg: String):
+	def talk_cloud(self, msg: str):
 		self.play_audio()
+
+	def manager_talk(self, msg):
+		self.talk('All nodes have been initialized what can I do for you?')
 
 def main(args=None):
 

@@ -3,8 +3,13 @@ from rclpy.node import Node
 from std_msgs.msg import String
 import json
 from rclpy.parameter import Parameter
+import warnings
 
 class BaseNode(Node):
+    # Suppress only the specific PyTorch warnings
+    warnings.filterwarnings("ignore", category=UserWarning, module="torch.nn.modules.rnn")
+    warnings.filterwarnings("ignore", category=FutureWarning, module="torch.nn.utils.weight_norm")
+
     def parse_params(self, msg: String):
         try:
             params: dict = json.loads(msg.data)

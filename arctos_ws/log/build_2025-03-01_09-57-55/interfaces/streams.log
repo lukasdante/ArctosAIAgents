@@ -1,0 +1,9 @@
+[0.008s] Invoking command in '/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/louis/Projects/arctoshumble/arctos_ws/install/vision:/home/louis/Projects/arctoshumble/arctos_ws/install/utils:/home/louis/Projects/arctoshumble/arctos_ws/install/tests:/home/louis/Projects/arctoshumble/arctos_ws/install/py_pubsub:/home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent:/opt/ros/humble /usr/bin/cmake --build /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces -- -j24 -l24
+[0.063s] failed to create symbolic link '/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces/ament_cmake_python/interfaces/interfaces' because existing path cannot be removed: Is a directory
+[0.064s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_interfaces.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_interfaces] Error 1
+[0.064s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_interfaces.dir/all] Error 2
+[0.064s] gmake[1]: *** Waiting for unfinished jobs....
+[0.065s] [  1%] Built target interfaces__cpp
+[0.066s] [ 12%] Built target interfaces__rosidl_generator_c
+[0.066s] gmake: *** [Makefile:146: all] Error 2
+[0.070s] Invoked command in '/home/louis/Projects/arctoshumble/arctos_ws/build/interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/louis/Projects/arctoshumble/arctos_ws/install/vision:/home/louis/Projects/arctoshumble/arctos_ws/install/utils:/home/louis/Projects/arctoshumble/arctos_ws/install/tests:/home/louis/Projects/arctoshumble/arctos_ws/install/py_pubsub:/home/louis/Projects/arctoshumble/arctos_ws/install/cancontrol:/home/louis/Projects/arctoshumble/arctos_ws/install/aiagent:/opt/ros/humble /usr/bin/cmake --build /home/louis/Projects/arctoshumble/arctos_ws/build/interfaces -- -j24 -l24
