@@ -11,6 +11,8 @@ import torch
 import librosa
 import requests
 import os
+from dotenv import load_dotenv
+
 
 class Writer(Node):
 	def __init__(self):
@@ -21,7 +23,7 @@ class Writer(Node):
 		self.declare_parameter('sample_rate', 16000, ParameterDescriptor(description='Sample rate of the audio recording.'))
 		self.declare_parameter('encoding_format', 'LINEAR16', ParameterDescriptor(description='Encoding format of the audio recording.'))
 		self.declare_parameter('local_model', 'base.en', ParameterDescriptor(description='OpenAI Whisper model type.'))
-		self.declare_parameter('inference', 'local', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
+		self.declare_parameter('inference', 'cloud', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
 
 		# Declare class properties
 		self.language = self.get_parameter('language').get_parameter_value().string_value
@@ -97,13 +99,14 @@ class Writer(Node):
 			self.reset_conversation()
 
 	def transcribe_cloud(self, msg: String):
-		""" Google Cloud speech-to-text inference. """
+		""" Google Cloud speech-to-text inference with detailed logging. """
 
 		# Convert ROS2 String message to raw string content
-		audio_content = msg.data  # Extract raw audio content from the ROS2 message
+		audio_content = msg.data
 
 		# Configure the request
 		headers = {'Content-Type': 'application/json'}
+
 		body = {
 			'config': {
 				'encoding': self.encoding_format,
@@ -115,27 +118,25 @@ class Writer(Node):
 			}
 		}
 
-		# Send the request
+		# Send the request to the cloud API
 		response = requests.post(self.api_endpoint, headers=headers, json=body)
 
 		# Check if the request is successful
 		if response and response.status_code == 200:
 			result = response.json()
-
 			# Get the transcription from results
 			if 'results' in result:
 				for res in result['results']:
 					transcription = res['alternatives'][0]['transcript']
-					
 					self.publish_transcript(transcription)
-			
 			else:
-				self.get_logger().info("No transcription found, resetting conversation.")
-
+				self.get_logger().info("No transcription found in the response; resetting conversation.")
+				self.reset_conversation()
 		else:
 			self.get_logger().error(f"Writer request error {response.status_code if response else 'unknown'}.")
 
 def main(args=None):
+	load_dotenv()
 	try:
 		rclpy.init(args=args)
 		lone_writer = Writer() # instantiate Writer Node

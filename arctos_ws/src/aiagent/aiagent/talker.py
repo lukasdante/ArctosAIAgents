@@ -6,15 +6,22 @@ from interfaces.srv import TalkString
 
 from kokoro import KPipeline
 import sounddevice as sd
+from dotenv import load_dotenv
 import torch
 import json
 import requests
 import io
 import json
 import time
+import base64
+import os
+import wave
+import pyaudio
 
 from google.auth import jwt as google_jwt
 from google.auth import crypt
+from google.oauth2 import service_account
+
 
 class Talker(BaseNode):
 	def __init__(self):
@@ -25,7 +32,7 @@ class Talker(BaseNode):
 		self.declare_parameter('gender', 'FEMALE', ParameterDescriptor(description='Gender of the text-to-speech voice agent.'))
 		self.declare_parameter('accent', 'en-US-Neural2-C', ParameterDescriptor(description='Accent or voice type of the text-to-speech voice agent.'))
 		self.declare_parameter('encoding_format', 'LINEAR16', ParameterDescriptor(description='Encoding format of the audio recording.'))
-		self.declare_parameter('inference', 'local', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
+		self.declare_parameter('inference', 'cloud', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
 		self.declare_parameter('sample_rate', 24000, ParameterDescriptor(description="Sample rate of audio playback."))
 
 		# Set node parameters
@@ -33,9 +40,16 @@ class Talker(BaseNode):
 		self.gender = self.get_parameter('gender').get_parameter_value().string_value
 		self.accent = self.get_parameter('accent').get_parameter_value().string_value
 		self.encoding_format = self.get_parameter('encoding_format').get_parameter_value().string_value
-		# self.token_validity = self.get_parameter('token_life').get_parameter_value().integer_value
 		self.inference = self.get_parameter('inference').get_parameter_value().string_value
 		self.sample_rate = self.get_parameter('sample_rate').get_parameter_value().integer_value
+
+		# set cloud parameters
+		self.token_validity = 3600
+		self.token_url = "https://oauth2.googleapis.com/token"
+		self.scopes = "https://www.googleapis.com/auth/cloud-platform"
+		self.api_endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize"
+		self.service_account = service_account.Credentials.from_service_account_info(json.loads(os.getenv("TTS_SERVICE_ACCOUNT")))
+
 
 		self.publisher = self.create_publisher(Bool, 'conversation/reset', 10)            
 		self.response_subscriber = self.create_subscription(String, 'conversation/response', self.talk, 10)
@@ -87,7 +101,7 @@ class Talker(BaseNode):
 			self.talk_local(msg, voice='af_heart')
 
 		if self.inference == 'cloud':
-			self.talk_cloud()
+			self.talk_cloud(msg)
 
 		self.reset_conversation()
 
@@ -108,11 +122,8 @@ class Talker(BaseNode):
 		graphemes, phonemes, audio = next(generator)
 		self.play_audio(audio, 24000)
 
-	def talk_cloud(self, msg: str):
-		self.play_audio()
-
 	def manager_talk(self, msg):
-		self.talk('All nodes have been initialized what can I do for you?')
+		self.talk('All nodes have been initialized, what can I do for you?')
 
 	### CLOUD
 
@@ -140,7 +151,7 @@ class Talker(BaseNode):
 
 		now = int(time.time())
 		payload = {
-			"iss": self.service_account_info["client_email"],
+			"iss": self.service_account.service_account_email,
 			"scope": self.scopes,
 			"aud": self.token_url,
 			"iat": now,
@@ -148,7 +159,7 @@ class Talker(BaseNode):
 		}
 
 		# Sign the JWT using the private key from the service account
-		signed_jwt = google_jwt.encode(crypt.RSASigner.from_service_account_info(self.service_account_info), payload)
+		signed_jwt = google_jwt.encode(crypt.RSASigner.from_service_account_info(json.loads(os.getenv('TTS_SERVICE_ACCOUNT'))), payload)
 
 		# Request access token
 		response = requests.post(self.token_url, data={
@@ -183,7 +194,7 @@ class Talker(BaseNode):
 
 		return api_response_text
 
-	def talk(self, msg):
+	def talk_cloud(self, msg):
 		""" Talks given a response in text. """
 
 		# Request a text-to-speech response
@@ -200,17 +211,29 @@ class Talker(BaseNode):
 
 		# Use io.BytesIO to handle audio data in memory
 		audio_stream = io.BytesIO(audio_data)
+		with wave.open(audio_stream, 'rb') as wav_file:
+			# Set up the PyAudio stream
+			audio = pyaudio.PyAudio()
+			stream = audio.open(
+				format=audio.get_format_from_width(wav_file.getsampwidth()),
+				channels=wav_file.getnchannels(),
+				rate=wav_file.getframerate(),
+				output=True
+			)
 
+			# Read and play audio data
+			data = wav_file.readframes(1024)
+			while data:
+				stream.write(data)
+				data = wav_file.readframes(1024)
 
-		# Prepare the message
-		msg = Bool()
-		msg.data = True
-
-		# Publish the message
-		self.publisher.publish(msg)
-		self.get_logger().info("Playback finished, resetting conversation.")
+			# Stop and close the stream
+			stream.stop_stream()
+			stream.close()
+			audio.terminate()
 
 def main(args=None):
+	load_dotenv()
 
 	try:
 		rclpy.init(args=args)
