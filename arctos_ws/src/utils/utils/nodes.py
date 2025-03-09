@@ -9,6 +9,7 @@ class BaseNode(Node):
     # Suppress only the specific PyTorch warnings
     warnings.filterwarnings("ignore", category=UserWarning, module="torch.nn.modules.rnn")
     warnings.filterwarnings("ignore", category=FutureWarning, module="torch.nn.utils.weight_norm")
+    warnings.simplefilter("ignore", UserWarning)
 
     def parse_params(self, msg: String):
         try:
@@ -19,13 +20,14 @@ class BaseNode(Node):
         
         return params
 
-    def change_parameter(self, params: dict):
-        """
-        Processes a ROS message containing parameter change instructions.
+    def change_parameter(self, msg: String):
 
-        Args:
-            msg (String): The ROS message containing JSON-encoded parameter data.
-        """
+        params = self.parse_params(msg)
+
+        if not params:
+            return
+        
+        self.get_logger().info(f'Parameters: {params}')
 
         # Supported parameters that can be changed
         supported_parameters = {
@@ -35,11 +37,12 @@ class BaseNode(Node):
             'model': rclpy.Parameter.Type.STRING,
             'threshold': rclpy.Parameter.Type.INTEGER,
             'silence_limit': rclpy.Parameter.Type.DOUBLE,
+            'inference': rclpy.Parameter.Type.STRING,
         }
-        self.get_logger().debug(f"Supported parameters: {supported_parameters}")
-
 
         status = params['change_parameter']
+
+        self.get_logger().info(f'Status: {status}')
 
         # If the status of changing the parameter is False, return
         if status == 'False':
@@ -50,22 +53,22 @@ class BaseNode(Node):
                 # the parameter is the key
                 parameter = key
                 # the parameter data type is obtained from supported_parameters
-                type = supported_parameters[f'{key}']
+                _type = supported_parameters[f'{key}']
                 # the value is obtained from the msg
                 value = params[f'{key}']
 
                 # change parameter type if necessary
-                if type == rclpy.Parameter.Type.INTEGER:
+                if _type == rclpy.Parameter.Type.INTEGER:
                     value = int(value)
-                if type == rclpy.Parameter.Type.DOUBLE:
+                if _type == rclpy.Parameter.Type.DOUBLE:
                     value = float(value)
-                if type == rclpy.Parameter.Type.STRING:
+                if _type == rclpy.Parameter.Type.STRING:
                     value = str(value)
                 
-                self.get_logger().debug(f"Processing parameter: {key}, type: {type}, value: {value}")
+                self.get_logger().info(f"Processing parameter: {key}, type: {type}, value: {value}")
 
         # set the parameter
-        param = Parameter(parameter, type, value)
+        param = Parameter(parameter, _type, value)
         self.get_logger().info(f"Setting parameter: '{parameter}' to '{value}'")
         self.set_parameters([param])
         self.get_logger().info("Parameter change completed.")

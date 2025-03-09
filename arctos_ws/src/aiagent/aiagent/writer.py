@@ -127,8 +127,11 @@ class Writer(Node):
 			# Get the transcription from results
 			if 'results' in result:
 				for res in result['results']:
-					transcription = res['alternatives'][0]['transcript']
-					self.publish_transcript(transcription)
+					try:
+						transcription = res['alternatives'][0]['transcript']
+						self.publish_transcript(transcription)
+					except:
+						pass
 			else:
 				self.reset_conversation()
 		else:

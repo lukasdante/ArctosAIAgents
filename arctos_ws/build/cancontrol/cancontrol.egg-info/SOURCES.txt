@@ -12,4 +12,5 @@ cancontrol.egg-info/entry_points.txt
 cancontrol.egg-info/requires.txt
 cancontrol.egg-info/top_level.txt
 cancontrol.egg-info/zip-safe
+launch/motor_launch.py
 resource/cancontrol

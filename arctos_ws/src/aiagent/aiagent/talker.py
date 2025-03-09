@@ -50,19 +50,18 @@ class Talker(BaseNode):
 		self.api_endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize"
 		self.service_account = service_account.Credentials.from_service_account_info(json.loads(os.getenv("TTS_SERVICE_ACCOUNT")))
 
-
 		self.publisher = self.create_publisher(Bool, 'conversation/reset', 10)            
 		self.response_subscriber = self.create_subscription(String, 'conversation/response', self.talk, 10)
 		self.parameter_subscriber = self.create_subscription(String, 'conversation/parameters', self.change_property, 10)
 		self.manager_subscriber = self.create_subscription(Bool, 'manager/nodes_initialized', self.manager_talk, 10)
+		self.oneshot_subscriber = self.create_subscription(String, "observation/oneshot_response", self.oneshot_response, 10)
 		self.srv = self.create_service(TalkString, 'talk', self.talk_srv)
 
 		self.get_logger().info('Talker node initialized.')
 
 	def change_property(self, msg):
 		try:
-			params = self.parse_params(msg)
-			self.change_parameter(params)
+			self.change_parameter(msg)
 			self.gender = self.get_parameter('gender').get_parameter_value().string_value.upper()
 
 			if self.gender == 'FEMALE':
@@ -71,13 +70,40 @@ class Talker(BaseNode):
 			if self.gender == 'MALE':
 				self.accent = 'en-US-Neural2-D'
 
-			self.frequency = round(1 / self.get_parameter('fps').get_parameter_value().integer_value, 2)
+			self.inference = self.get_parameter('inference').get_parameter_value().string_value.upper()
 
 			# self.get_logger().info(f'M: {self.model}')
-			self.get_logger().info(f'F: {self.frequency}')
+			self.get_logger().info(f'F: {self.inference}')
 			
 		except:
 			return
+		
+	def oneshot_response(self, msg: String):
+		self.get_logger().info(f'Hello')
+		msg: str = msg.data
+		classes = msg.split(',')
+		class_set = set(classes)
+
+		class_counts = {}
+		for _class in class_set:
+			class_counts[_class] = classes.count(_class)
+
+		self.get_logger().info(f'{class_counts}')
+
+		response = "I see "
+		len_classes = len(class_counts)
+		count = 0
+		for key, value in class_counts.items():
+			if count == len_classes:
+				response += 'and '
+			
+			suffix = ''
+			if value > 1:
+				suffix = 's'
+			response = response + f'{value} {key}{suffix}, '
+			count += 1
+		self.get_logger().info(f'{response}')
+		self.talk(response)
 		
 	def talk_srv(self, request, response):
 		response.success = self.talk(request.text)
@@ -92,15 +118,18 @@ class Talker(BaseNode):
 
 	def talk(self, msg):
 		""" Talks given a response in text. """
-		if type(msg) is String:
+		if type(msg) == String:
 			msg = msg.data
 		if type(msg) != str:
 			self.get_logger().info('The provided message cannot be parsed.')
 
-		if self.inference == 'local':
+		if not msg:
+			return False
+
+		if self.inference.lower() == 'local':
 			self.talk_local(msg, voice='af_heart')
 
-		if self.inference == 'cloud':
+		if self.inference.lower() == 'cloud':
 			self.talk_cloud(msg)
 
 		self.reset_conversation()
@@ -113,6 +142,9 @@ class Talker(BaseNode):
 		sd.wait()
 
 	def talk_local(self, msg: str, voice):
+
+		msg = msg.replace('Nabi', 'Nahbie')
+
 		pipeline = KPipeline(lang_code='a')
 		generator = pipeline(
 			msg,

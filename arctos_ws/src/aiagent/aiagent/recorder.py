@@ -110,6 +110,7 @@ class Recorder(BaseNode):
                 if (self.get_clock().now().nanoseconds - initial_time) > ((self.silence_limit + 0.1) * 1e9):
                     self.get_logger().info("Silence detected. Stopping recording...")
                     break
+                    
                 
         # Stop and close the stream
         stream.stop_stream()

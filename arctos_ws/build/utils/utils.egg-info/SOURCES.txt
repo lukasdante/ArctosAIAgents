@@ -4,6 +4,7 @@ setup.py
 launch/manager_launch.py
 resource/utils
 utils/__init__.py
+utils/gripper.py
 utils/helpers.py
 utils/manager.py
 utils/nodes.py

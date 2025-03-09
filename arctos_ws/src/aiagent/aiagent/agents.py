@@ -62,8 +62,7 @@ class Agent(BaseNode):
 
 	def change_property(self, msg):
 		try:
-			params = self.parse_params(msg)
-			self.change_parameter(params)
+			self.change_parameter(msg)
 
 			if self.get_parameter('mode').get_parameter_value().string_value == "Dialogflow CX":
 				self.mode = "flows"
@@ -129,11 +128,10 @@ class Agent(BaseNode):
 			# Extract the response and the parameters
 			response, params = self.extract_params_response(response_text)
 
-			# Publish the response
 			response_msg = String()
 			response_msg.data = response
 			self.response_publisher.publish(response_msg)
-			self.get_logger().info(f"Response text: {response_text}")
+			self.get_logger().info(f"Response text: {response}")
 			
 			
 
