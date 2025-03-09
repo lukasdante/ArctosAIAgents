@@ -14,4 +14,5 @@ aiagent.egg-info/requires.txt
 aiagent.egg-info/top_level.txt
 aiagent.egg-info/zip-safe
 launch/audio_launch.py
+launch/main_launch.py
 resource/aiagent

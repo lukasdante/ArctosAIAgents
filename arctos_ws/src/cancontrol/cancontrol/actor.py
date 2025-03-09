@@ -9,13 +9,14 @@ import torch
 
 from .joint import Joint, ParallelGripper
 from .reacher import Reacher
+from utils.nodes import BaseNode
 
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
 
-class JointActor(Node):
+class JointActor(BaseNode):
     def __init__(self, joint_configs: List, gripper_config: dict):
         super().__init__('actor')
 

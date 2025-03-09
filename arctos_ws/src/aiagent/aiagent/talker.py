@@ -32,7 +32,7 @@ class Talker(BaseNode):
 		self.declare_parameter('gender', 'FEMALE', ParameterDescriptor(description='Gender of the text-to-speech voice agent.'))
 		self.declare_parameter('accent', 'en-US-Neural2-C', ParameterDescriptor(description='Accent or voice type of the text-to-speech voice agent.'))
 		self.declare_parameter('encoding_format', 'LINEAR16', ParameterDescriptor(description='Encoding format of the audio recording.'))
-		self.declare_parameter('inference', 'cloud', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
+		self.declare_parameter('inference', 'local', ParameterDescriptor(description="The inference method, can be 'local' or 'cloud'."))
 		self.declare_parameter('sample_rate', 24000, ParameterDescriptor(description="Sample rate of audio playback."))
 
 		# Set node parameters

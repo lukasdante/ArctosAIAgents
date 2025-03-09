@@ -1,10 +1,13 @@
+import warnings
+warnings.simplefilter("ignore", UserWarning)
+
 from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
 import ultralytics.engine.results
 
 import rclpy
-from arctos_ws.src.utils.utils.base import BaseNode
+from utils.nodes import BaseNode
 from sensor_msgs.msg import Image
 from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
@@ -26,11 +29,7 @@ class Observer(BaseNode):
             self.video = self.get_parameter('video').get_parameter_value().bool_value
             self.threshold = self.get_parameter('threshold').get_parameter_value().integer_value
             # Initialize camera
-            self.cap = cv2.VideoCapture(0)
-            # try:
-            #     self.cap = cv2.VideoCapture(0)
-            # except:
-            #     pass
+            self.cap = cv2.VideoCapture(2)
 
             if not self.cap.isOpened():
                 self.get_logger().error("Could not access the default camera.")
@@ -127,6 +126,7 @@ class Observer(BaseNode):
         cv2.destroyAllWindows()
 
 def main(args=None):
+
     rclpy.init(args=args)
     observer = Observer()
 

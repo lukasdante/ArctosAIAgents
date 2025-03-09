@@ -3,7 +3,7 @@ from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
 import torch
 import json
-from utils.utils.nodes import BaseNode
+from utils.nodes import BaseNode
 from typing import List
 from .joint import Joint, ParallelGripper
 

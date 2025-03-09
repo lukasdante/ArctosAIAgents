@@ -130,7 +130,6 @@ class Writer(Node):
 					transcription = res['alternatives'][0]['transcript']
 					self.publish_transcript(transcription)
 			else:
-				self.get_logger().info("No transcription found in the response; resetting conversation.")
 				self.reset_conversation()
 		else:
 			self.get_logger().error(f"Writer request error {response.status_code if response else 'unknown'}.")

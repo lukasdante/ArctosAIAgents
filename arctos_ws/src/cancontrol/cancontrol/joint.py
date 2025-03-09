@@ -1,14 +1,17 @@
 import os
 import can
+import subprocess
 import serial.tools.list_ports
 from dotenv import load_dotenv
+from collections import namedtuple
+from typing import Iterable
 import serial
-from utils.utils.helpers import find_port, change_permissions
 
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from rcl_interfaces.msg import ParameterDescriptor
+from utils.helpers import find_port, change_permissions
 
 class ParallelGripper(Node):
     def __init__(self, axis, baud_rate, open_limit, close_limit, bus=None):

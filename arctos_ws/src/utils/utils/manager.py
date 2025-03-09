@@ -3,10 +3,13 @@ from rclpy.node import Node
 from std_msgs.msg import String, Bool
 from rcl_interfaces.msg import ParameterDescriptor
 from interfaces.msg import NodeStatus
+import time
 
 class NodeManager(Node):
     def __init__(self):
         super().__init__('manager')
+
+        time.sleep(2)
 
         # Declare parameters for the node
         self.declare_parameter('frequency', 2, ParameterDescriptor(description='Times the node status is being checked per second.'))

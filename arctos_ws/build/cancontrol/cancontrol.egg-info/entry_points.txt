@@ -1,3 +1,5 @@
 [console_scripts]
-
+actor = cancontrol.actor:main
+joint = cancontrol.joint:main
+reacher = cancontrol.reacher:main
 
